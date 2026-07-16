@@ -1,16 +1,34 @@
 <!DOCTYPE html>
 <html>
-  <body style="background-color: rgba(238, 235, 223, 0.812)">
-  <h1 style="color:rgba(33, 36, 230, 0.62);">Welcome!</h1>
-  <h3 style="color:rgba(60, 107, 249, 0.377);">About me:</h3>
-  <p style="color:rgba(84, 84, 223, 0.699); max-width: 500px;">
-    Hi! I'm soon to enter my senior year of highschool, and I love to code!
-    In my free time, I usually hang out with my family or friends, watch youtube,
-    and sometimes play roblox. I'm also very open minded and I enjoy debating people
-    and hearing new perspectives! And although I don't travel very often, it's one
-    of my favorite things to do!
-  </p>
-  <img style="width: 500px; height: 500px"src="./plane.png" />
-  <a href="https://www.roblox.com/">Link to Roblox</a>
+  <body style="background-image: url('./wallpaper.png'); background-size: cover; height: 100vh;">
+    <div style="display: flex; justify-content: space-between; backdrop-filter: blur(2px); background-color: rgba(0, 0, 0, 0.3); color: #fff">
+        <p style = "margin: 10px; font-weight: bold;">
+          MyOS
+        </p> 
+        <p id="timeElement" style = "margin: 5px;">
+          7/15/2026 11:04 PM
+        </p>
+    </div>
+    <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); border: 5px dotted; width: 700px; border-radius: 20px; padding: 10px; background-color: rgb(196, 196, 238)">
+        <h1 style="color:rgba(33, 36, 230, 0.62);">Welcome!</h1>
+        <h3 style="color:rgba(60, 107, 249, 0.377); font-weight: bold;">About me:</h3>
+        <p style="color:rgba(84, 84, 223, 0.699); max-width: 500px;">
+        Hi! I'm soon to enter my senior year of highschool, and I love to code!
+        In my free time, I usually hang out with my family or friends, watch youtube,
+        and sometimes play roblox. I'm also very open minded and I enjoy debating people
+        and hearing new perspectives! And although I don't travel very often, it's one
+        of my favorite things to do!
+        </p>
+        <img style="width: 500px; height: 500px"src="./plane.png" />
+        <a href="https://www.roblox.com/">Here's a link to Roblox</a>
+    </div>
+    <script>
+    function updateTime() {
+        var currentTime = new Date().toLocaleString();
+        var timeText = document.querySelector("#timeElement");
+        timeText.innerHTML = currentTime;
+    }
+    setInterval(updateTime, 1000);
+    </script>
   </body>
 </html>
